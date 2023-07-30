@@ -1,4 +1,14 @@
 export default function Header() {
+  let darkmode = document.querySelector('#darkmode');
+  function switchDark() {
+    if (darkmode?.classList.contains('bx-moon')) {
+      darkmode.classList.replace('bx-moon', 'bx-sun');
+      document.body.classList.add('color');
+    } else {
+      darkmode?.classList.replace('bx-sun', 'bx-moon');
+      document.body.classList.remove('color');
+    }
+  }
   return (
     <header>
       <a href='#' className='logo'>
@@ -21,7 +31,7 @@ export default function Header() {
           <a href='#'>Store</a>
         </li>
         <li>
-          <a href='#'>Contact Us</a>
+          <a href='#'>Contact</a>
         </li>
       </ul>
       <div className='h-main'>
@@ -29,7 +39,7 @@ export default function Header() {
           Buy Now
         </a>
         <div className='bx bx-menu' id='menu-icon'></div>
-        <div className='bx bx-moon' id='darkmode'></div>
+        <div onClick={switchDark} className='bx bx-moon' id='darkmode'></div>
       </div>
     </header>
   );
