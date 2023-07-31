@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
 
         <div className='hero-img'>
-          <img src={MainHero} alt='mainwach' />
+          <img src={MainHero} alt='mainwatch' />
         </div>
       </section>
       <div className='down-arrow'>

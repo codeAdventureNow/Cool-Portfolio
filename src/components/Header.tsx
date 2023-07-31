@@ -1,5 +1,5 @@
 export default function Header() {
-  let darkmode = document.querySelector('#darkmode');
+  const darkmode = document.querySelector('#darkmode');
   function switchDark() {
     if (darkmode?.classList.contains('bx-moon')) {
       darkmode.classList.replace('bx-moon', 'bx-sun');
@@ -9,6 +9,16 @@ export default function Header() {
       document.body.classList.remove('color');
     }
   }
+
+  const menu = document.querySelector('#menu-icon')
+  const navlist = document.querySelector('.navlist')
+
+  function switchMenu (){
+    menu?.classList.toggle('bx-x');
+    navlist?.classList.toggle('open')
+  }
+
+
   return (
     <header>
       <a href='#' className='logo'>
@@ -38,7 +48,7 @@ export default function Header() {
         <a href='#' className='h-btn'>
           Buy Now
         </a>
-        <div className='bx bx-menu' id='menu-icon'></div>
+        <div onClick={switchMenu} className='bx bx-menu' id='menu-icon'></div>
         <div onClick={switchDark} className='bx bx-moon' id='darkmode'></div>
       </div>
     </header>

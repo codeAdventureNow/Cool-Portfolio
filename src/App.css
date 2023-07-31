@@ -266,4 +266,85 @@ body.color {
   .hero-text {
     order: 2;
   }
+
+  .hero-img {
+    margin: auto;
+    height: auto;
+    width: auto;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+  }
+
+}
+
+
+@media (max-width: 1070px) {
+  header {
+    padding: 10px 3%;
+    background: var(--second-color)
+  }
+
+  #menu-icon {
+    display: initial;
+  }
+
+  .navlist {
+    position: absolute;
+    top: -700px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    transition: all ease .55s;
+    text-align: left;
+  }
+
+  .navlist a {
+    display: block;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0.8rem 1.8rem;
+    color: var(--second-color)
+  }
+
+  .navlist.open {
+    top: 100%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+  .hero-in {
+    grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+    gap: 18px;
+  }
+
+  .box {
+    padding: 10px 30px;
+  }
+
+  .h-btn {
+    padding: 6px 14px;
+    margin-right: 8px;
+  }
+
+  :root {
+    --big-font: 3rem;
+    --p-font: 14px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  #menu-icon {
+    margin-right: 5px;
+  }
+
 }
